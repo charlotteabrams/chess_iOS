@@ -114,19 +114,11 @@ class ViewController: UIViewController {
                 board[row][col] = board[click1.0][click1.1]
                 board[click1.0][click1.1] = 0
                 if player == 1 {
-                    
-                    print("Tag: \(buttons[row*8+col].tag),calculated value:\(row*8+col)")
-                    
-                    buttons[row*8+col].titleLabel!.textColor = UIColor.whiteColor()
-                    updateDisplay()
+                    buttons[row*8+col].setTitleColor(UIColor.whiteColor(), forState: .Normal)
                     player = 2
                 } else {
                     
-                    print("Tag: \(buttons[row*8+col].tag), calculated value:\(row*8+col)")
-                    
-                    buttons[row*8+col].titleLabel!.textColor = UIColor.blackColor()
-                    
-                    updateDisplay()
+                    buttons[row*8+col].setTitleColor(UIColor.blackColor(), forState: .Normal)
                     player = 1
                 }
             } else {
